@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
 
-const Maker = ({authService}) => {
+const Maker = ({FileInput, authService}) => {
 
   const navigate = useNavigate();
   const [cards, setCards] = useState({
@@ -82,7 +82,7 @@ const Maker = ({authService}) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout}/>
       <div className={styles.container}>
-      <Editor cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard}/>
+      <Editor FileInput={FileInput} cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard}/>
       <Preview cards={cards}/>
       </div>
       <Footer />
