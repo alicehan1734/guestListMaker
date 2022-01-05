@@ -7,9 +7,9 @@ const CardAddForm = ({FileInput, onAdd}) => {
 
   const formRef = useRef();
   const nameRef = useRef();
-  const companyRef = useRef();
+  const jobRef = useRef();
   const themeRef = useRef();
-  const titleRef = useRef();
+  const debtRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
 
@@ -30,9 +30,9 @@ const CardAddForm = ({FileInput, onAdd}) => {
     const card = {
       id: Date.now(),
       name: nameRef.current.value || '',
-      company: companyRef.current.value || '',
+      job: jobRef.current.value || '',
       theme: themeRef.current.value,
-      title: titleRef.current.value || '',
+      debt: debtRef.current.value || '',
       email: emailRef.current.value || '',
       message: messageRef.current.value || '',
       fileName: file.fileName || '',
@@ -48,14 +48,15 @@ const CardAddForm = ({FileInput, onAdd}) => {
   return (
     <form ref={formRef} className={styles.form}>
       <input ref={nameRef} className={styles.input} type="text" name="name" placeholder="Name"/>
-      <input ref={companyRef} className={styles.input} type="text" name="company" placeholder="Company"/>
+      <input ref={jobRef} className={styles.input} type="text" name="job" placeholder="Job"/>
       <select ref={themeRef} className={styles.select} name="theme" placeholder="Theme">
         <option placeholder="light">light</option>
         <option placeholder="dark">dark</option>
         <option placeholder="colorful">colorful</option>
+        <option placeholder="beige">beige</option>
       </select>
 
-      <input ref={titleRef} className={styles.input} type="text" name="title" placeholder="Title"/>
+      <input ref={debtRef} className={styles.input} type="number" name="debt" placeholder="Debt ( - $)"/>
       <input ref={emailRef} className={styles.input} type="text" name="email" placeholder="Email"/>
       <textarea ref={messageRef} className={styles.textarea} name="message" placeholder="Message"/>
       <div className={styles.fileInput} >

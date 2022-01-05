@@ -29,6 +29,10 @@
   color: makerBlack;
 }
 
+.card.beige{
+  background-color: #ac9161;
+  color: makerWhite;
+}
 .avatar{
   width: 10em;
   height: 10em;
@@ -36,13 +40,15 @@
   margin-left: 0.5em;
   margin-right: 1em;
   border-radius: 50%;
+  min-width: 10em;
+
 }
 
 .info{
   width: 100%;
 }
 
-.name, .company, .title, .email, .message {
+.name, .job, .debt, .email, .message {
   margin: 0;
   font-size: 0.8em;
   margin-bottom: 0.2em;
@@ -52,12 +58,12 @@
   font-size: 1.2em;
 }
 
-.company{
+.job{
   margin-bottom: 1em;
 
 }
 
-.company::after{
+.job::after{
   content: '';
   display: block;
   width: 90%;

@@ -24,7 +24,6 @@ const Maker = ({FileInput, authService, cardRepository}) => {
 
   const createOrUpdateCard = card => {
 
-    
     setCards(cards => {
       const updated = {...cards};
       updated[card.id] = card;
@@ -60,10 +59,10 @@ const Maker = ({FileInput, authService, cardRepository}) => {
     });
 
     return () => stopSync();
-    
+
   }, [userId]);
 
-  useEffect(()=>{
+  useEffect(() => {
     authService.onAuthChange(user => {
       if(user) {
         setUserId(user.uid);
@@ -73,7 +72,6 @@ const Maker = ({FileInput, authService, cardRepository}) => {
       }
     })
   })
-
 
   return (
     <section className={styles.maker}>

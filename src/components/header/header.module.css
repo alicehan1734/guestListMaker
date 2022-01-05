@@ -1,22 +1,24 @@
-@value makerGreen, makerWhite, makerBlack from '../../common/colors.css';
+@value makerGreen, makerWhite, makerBlack, makerPink from '../../common/colors.css';
 
 .header {
   width: 100%;
   text-align : center;
   padding : 0.5em;
-  background-color: makerGreen;
+  background-color: makerBlack;
   position:relative;
 
 }
 
 .logo{
-  width: 3em;
+  /* width: 3em; */
+  height: 2em;
 }
 
 .title{
   margin: 0;
   color: makerWhite;
-
+  margin-top: 0.5rem;
+  font-weight: 500;
 }
 
 .logout{
@@ -24,10 +26,18 @@
   right: 3em;
   top: 1em;
   padding: 0.8em;
-  border-radius: 20%;
-  background-color: makerBlack;
+  border-radius: 30%;
+  background-color: makerGreen;
   color : makerWhite;
   outline: 0;
   border: 0;
   cursor : pointer;
+  transition: 0.8s;
+
+}
+
+.logout:hover{
+  background-color: makerPink;
+  color: makerBlack;
+
 }
