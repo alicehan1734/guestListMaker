@@ -6,44 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
 
-const Maker = ({FileInput, authService}) => {
+const Maker = ({FileInput, authService, cardRepository}) => {
+
+  const historyState = useNavigate.state;
+
+  const [userId, setUserId] = useState(historyState &&  historyState.id);
 
   const navigate = useNavigate();
-  const [cards, setCards] = useState({
-    '1' : {
-      id: '1',
-      name: 'HeeYeon Han',
-      company: 'Samsung',
-      message:'sdf',
-      theme: 'dark',
-      title: 'Software Engineer',
-      email: 'go for it',
-      fileName: 'alice',
-      fileURL:null
-    },
-    '2': {
-      id: '2',
-      name: 'HeeYeon Han',
-      company: 'Samsung',
-      message:'sdf',
-      theme: 'light',
-      title: 'Software Engineer',
-      email: 'go for it',
-      fileName: 'alice',
-      fileURL:null
-    },   
-    '3': {
-      id: '3',
-      name: 'HeeYeon Han',
-      company: 'Samsung',
-      message:'sdf',
-      theme: 'colorful',
-      title: 'Software Engineer',
-      email: 'go for it',
-      fileName: 'alice',
-      fileURL:null
-    },
-  })
+  const [cards, setCards] = useState({})
 
 
   const onLogout = () => {
@@ -63,6 +33,8 @@ const Maker = ({FileInput, authService}) => {
 
     console.log(cards);
 
+    cardRepository.saveCard(userId, card);
+
   }
 
   const deleteCard = card => {
@@ -72,12 +44,32 @@ const Maker = ({FileInput, authService}) => {
       return updated;
     })
 
+    cardRepository.removeCard(userId, card);
+
+
   }
+
+  useEffect(() => {
+
+    if(!userId) {
+      return
+    }
+
+    const stopSync = cardRepository.syncCards(userId, cards => {
+      setCards(cards);
+    });
+
+    return () => stopSync();
+    
+  }, [userId]);
 
   useEffect(()=>{
     authService.onAuthChange(user => {
-      if(!user) {
+      if(user) {
+        setUserId(user.uid);
+      }else{
         navigate("/");
+
       }
     })
   })
