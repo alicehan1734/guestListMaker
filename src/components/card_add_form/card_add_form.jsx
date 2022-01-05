@@ -35,7 +35,7 @@ const CardAddForm = ({FileInput, onAdd}) => {
       title: titleRef.current.value || '',
       email: emailRef.current.value || '',
       message: messageRef.current.value || '',
-      fileName: file.fileNamae || '',
+      fileName: file.fileName || '',
       fileURL: file.fileURL || ''
     }
 

@@ -53,11 +53,16 @@ const Maker = ({FileInput, authService}) => {
 
 
   const createOrUpdateCard = card => {
+
+    
     setCards(cards => {
       const updated = {...cards};
       updated[card.id] = card;
       return updated;
     })
+
+    console.log(cards);
+
   }
 
   const deleteCard = card => {
