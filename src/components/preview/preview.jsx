@@ -4,7 +4,7 @@ import styles from './preview.module.css'
 
 const Preview = ({cards}) => {
   return (
-    <section className={styles.preview}>
+    <section className={styles.preview} id="capture">
       <h1 className={styles.title}>Guest List Preview</h1>
       <ul className={styles.cards}>
       {

@@ -4,9 +4,12 @@ import Maker from './components/maker/maker';
 
 import {Routes , Route } from 'react-router-dom'
 function App({authService, FileInput, cardRepository}) {
+  
+  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+  
   return (
     <div className={styles.app}>
-
+      
       <Routes>
         <Route exact={true} path="/" element={<Login authService={authService}/>}/>
         <Route path="/maker"  element={<Maker cardRepository={cardRepository} FileInput={FileInput} authService={authService}/> }/>

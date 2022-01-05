@@ -21,19 +21,19 @@
   font-weight: 500;
 }
 
+
 .logout{
-  position: absolute;
-  right: 3em;
-  top: 1em;
-  padding: 0.8em;
-  border-radius: 30%;
+  margin-right: 0.5em;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+  border-radius: 5em;
   background-color: makerGreen;
   color : makerWhite;
   outline: 0;
   border: 0;
   cursor : pointer;
   transition: 0.8s;
-
+  width: 10em;
 }
 
 .logout:hover{
