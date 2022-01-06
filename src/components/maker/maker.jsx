@@ -30,7 +30,6 @@ const Maker = ({FileInput, authService, cardRepository}) => {
       return updated;
     })
 
-    console.log(cards);
 
     cardRepository.saveCard(userId, card);
 
@@ -67,7 +66,7 @@ const Maker = ({FileInput, authService, cardRepository}) => {
       if(user) {
         setUserId(user.uid);
       }else{
-        navigate("/");
+        navigate("/glm/");
 
       }
     })

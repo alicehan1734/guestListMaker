@@ -10,11 +10,10 @@ const Login = ({authService}) => {
 
   const goToMaker = userId => {
 
-    navigate("/maker", { id : userId})
+    navigate("/glm/maker", { id : userId})
   };
 
   const onLogin = event => {
-    console.log(event.currentTarget.textContent);
     
     authService
     .login(event.currentTarget.textContent)

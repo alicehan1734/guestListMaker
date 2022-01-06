@@ -1,4 +1,3 @@
-@value makerBlack, makerWhite, makerShadow, makerColorful,makerWheat from '../../common/colors.css';
 
 .card{
   display: flex;
@@ -7,31 +6,31 @@
   border-radius: 1em;
   margin-bottom: 0.5em;
   padding : 0.2em 0;
-  box-shadow: 6px 6px 8px 0px makerShadow;
+  box-shadow: 6px 6px 8px 0px rgba(217,217,217,1);
   max-width: 30rem;
 }
 
 .card.dark {
-  background-color: makerBlack;
-  color: makerWhite;
+  background-color: black;
+  color: white;
 
 }
 
 
 .card.light {
-  background-color: makerWhite;
-  color: makerBlack;
+  background-color: white;
+  color: black;
   
 }
 
 .card.colorful {
-  background-image: makerColorful;
-  color: makerBlack;
+  background-image: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
+  color: black;
 }
 
 .card.beige{
   background-color: #ac9161;
-  color: makerWhite;
+  color: white;
 }
 .avatar{
   width: 10em;
@@ -68,6 +67,6 @@
   display: block;
   width: 90%;
   height: 2px;
-  background-color: makerWheat;
+  background-color: wheat;
   transform: translateY(0.5em);
 }

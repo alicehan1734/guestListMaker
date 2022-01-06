@@ -9,8 +9,8 @@ function App({authService, FileInput, cardRepository}) {
     <div className={styles.app}>
       
       <Routes>
-        <Route exact={true} path="/" element={<Login authService={authService}/>}/>
-        <Route path="/maker"  element={<Maker cardRepository={cardRepository} FileInput={FileInput} authService={authService}/> }/>
+        <Route exact={true} path="/glm" element={<Login authService={authService}/>}/>
+        <Route path="/glm/maker"  element={<Maker cardRepository={cardRepository} FileInput={FileInput} authService={authService}/> }/>
       </Routes>
       
     </div>
