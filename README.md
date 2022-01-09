@@ -5,14 +5,16 @@
 [![Website Status](https://img.shields.io/badge/Website%20Status-Online-green)](https://heeyeonhan.com/glm/)
 [![Author](https://img.shields.io/badge/Author-Heeyeon%20Han-blue.svg)](https://www.linkedin.com/in/alicehan1734/)
 
- <p align="justify">A front-end website for making the game guest list for user called Guest List Maker. </p>
- 
- Link - https://heeyeonhan.com/glm/
+ <p align="justify">Full-stack web application called Guest List Maker which allows game organizer to check their guest list</p>
+ <p align="justify">Included User authentication with Github and features such as Google login, Upload and Delete guest list
+database, Profile, Save as PDF file</p>
+
+Link - https://heeyeonhan.com/glm/
  
  
  
 ## Demo
-
+![]()
 
 
 ## Technologies Used
